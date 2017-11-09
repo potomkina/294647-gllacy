@@ -7,7 +7,7 @@
   <body>
     <header class="main-header">
       <a class="main-header-logo">
-        <img src="img/index-logo.svg" width="300" height="200" alt="Логотип Glassy">
+        <img src="img/logo.svg" width="160" height="65" alt="Логотип Glassy">
       </a>
       <nav class="main-navigation">
         <ul class="main-navigation-list">
@@ -22,8 +22,8 @@
         </ul>
       </nav>
       <div class="schedule">
-        <span class="clock">С 10 до 20, ежедневно</span>
-        <span class="phone">8 812 450-25-25</span>
+        <span class="shedule-item clock">С 10 до 20, ежедневно</span>
+        <span class="shedule-item phone">8 812 450-25-25</span>
       </div>
     </header>
     <main class="container">
@@ -36,51 +36,67 @@
           <h2 class="banner-title">Малинка даром!</h2>
           <p class="banner-text">При покупке 2 кг любого фруктового мороженого,
           добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <button class="banner-button">Хочу варенье!</button>
+          <a class="banner-button" href="#">Хочу варенье!</a>
         </article>
         <article class="banner chocolate">
           <h2 class="banner-title">Шоколадки даром!</h2>
           <p class="banner-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку
           вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a href="catalog.html">Хочу шоколадки!</a>
+          <a class="banner-button" href="#">Хочу шоколадки!</a>
         </article>
       </section>
       <section class="hit-products">
         <article class="catalog-item">
-          <a class="catalog-image-link" href="#">
-            <img src="catalog-1.png" alt="товар 1">
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-link" href="#">
+              <img src="img/catalog-item-1.jpg" alt="товар 1" width="267" height="267">
+            </a>
+          </p>
           <span class="catalog-item-price"><b>310 Р</b></span><span class="catalog-item-weight">/кг</span>
-          <a class="catalog-link" href="#">
-            <p class="item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-link" href="#">
+              <p class="catalog-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            </a>
+          </p>
         </article>
         <article class="catalog-item">
-          <a class="catalog-image-link" href="#">
-            <img src="catalog-2.png" alt="товар 2">
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-image" href="#">
+              <img src="img/catalog-item-2.jpg" alt="товар 2" width="267" height="267">
+            </a>
+          </p>
           <span class="catalog-item-price"><b>380 Р</b></span><span class="catalog-item-weight">/кг</span>
-          <a class="catalog-link" href="#">
-            <span class="item-title">Сливочно-кофейное с кусочками шоколада</span>
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-link" href="#">
+              <span class="catalog-item-text">Сливочно-кофейное с кусочками шоколада</span>
+            </a>
+          </p>
         </article>
         <article class="catalog-item">
-          <a class="catalog-image-link" href="#">
-            <img src="catalog-3.png" alt="товар 3">
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-image" href="#">
+              <img src="img/catalog-item-3.jpg" alt="товар 3" width="267" height="267">
+            </a>
+          </p>
           <span class="catalog-item-price"><b>355 Р</b></span><span class="catalog-item-weight">/кг</span>
-          <a class="catalog-link" href="#">
-            <span class="item-title">Сливочно-клубничное с присыпкой из белого шоколада</span>
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-link" href="#">
+              <span class="catalog-item-text">Сливочно-клубничное с присыпкой из белого шоколада</span>
+            </a>
+          </p>
         </article>
         <article class="catalog-item">
-          <a class="catalog-image-link" href="#">
-            <img src="catalog-4.png" alt="товар 4">
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-image" href="#">
+              <img src="img/catalog-item-4.jpg" alt="товар 4" width="267" height="267">
+            </a>
+          </p>
           <span class="catalog-item-price"><b>415 Р</b></span><span class="catalog-item-weight">/кг</span>
-          <a class="catalog-link" href="#">
-            <span class="item-title">Сливочное крем-брюле с карамельной подливкой</span>
-          </a>
+          <p class="catalog-item-container">
+            <a class="catalog-item-link" href="#">
+              <span class="catalog-item-text">Сливочное крем-брюле с карамельной подливкой</span>
+            </a>
+          </p>
         </article>
       </section>
       <section class="about-us">
@@ -103,11 +119,11 @@
       </section>
       <section class="promotion">
         <div class="news">
-          <h4 class="news-item-title">Новое в нашем блоге</h4>
-          <a href="news.html">10 способов сервировки фруктовых щербетов к столу</a>
+          <h4 class="news-title">Новое в нашем блоге</h4>
+          <a href="news.html" class="news-item-link">10 способов сервировки фруктовых щербетов к столу</a>
         </div>
         <div class="mail">
-          <p class="mail-item-title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
+          <p class="mail-title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
           что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <input type="email" value="Электронная почта">
           <input class="banner-button" type="submit" value="Отправить">
@@ -115,9 +131,9 @@
       </section>
       <section class="adress">
         <p class="adress-text">Адрес главного офиса и офлайн-магазина:</p>
-        <p class="adress-text-bold"><b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+        <p class="adress-text bold">ул.Большая Конюшенная 19/8, Санкт-Петербург</p>
         <p class="adress-text">Для заказов по телефону:</p>
-        <p class="address-text-bold"><b>8 812 450-25-25 (с 10 до 20 ежедневно)</b></p>
+        <p class="address-text bold">8 812 450-25-25 (с 10 до 20 ежедневно)</p>
         <a class="banner-button" href="#">Форма обратной связи</a>
       </section>
     </main>
@@ -139,7 +155,7 @@
         </ul>
       </div>
       <div class="footer-copyright">
-        <img src="logo-min.png" alt="логотип">
+        <img src="img/logo-htmlacademy.svg" alt="логотип" width="110" height="42">
         <p class="footer-copyright-text">Сделано в <a href="index.html">HTML Academy</a>© 2017</p>
       </div>
     </footer>
