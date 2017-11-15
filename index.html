@@ -19,20 +19,7 @@
           <h2 class="visually-hidden">Пользовательская навигация</h2>
           <ul class="user-navigation-list">
             <li class="user-navigation-item search" tabindex="0" aria-label="Поиск"></li>
-            <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
-              <label for="input-search">
-                <input class="user-navigation-input" type="search" id="input-search" placeholder="Что ищем?" autofocus>
-              </label>
-            </form>
             <li class="user-navigation-item login" tabindex="0" placeholder="Вход"></li>
-            <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
-              <label for="user-navigation-email">
-                <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта" autofocus required>
-              </label>
-              <label for="user-navigation-password">
-                <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль" required>
-              </label>
-            </form>
             <li class="user-navigation-item basket" tabindex="0" placeholder="Пусто"></li>
           </ul>
         </section>
@@ -151,13 +138,6 @@
           <p class="adress-text">Для заказов по телефону:</p>
           <span class="address-text bold">8 812 450-25-25 (с 10 до 20 ежедневно)</span>
           <a class="banner-button" href="#">Форма обратной связи</a>
-          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
-            <h3 class="feedback-form-title bold">Мы обязательно Вам ответим!</h3>
-            <label><input class="feedback-form-input" placeholder="Как вас зовут?" autofocus required></label>
-            <label><input class="feedback-form-input" placeholder="Ваша почта для ответа?" required></label>
-            <textarea class="feedback-form-textarea" name="textarea" cols="15" rows="6" required></textarea>
-            <button class="banner-button" type="submit">Отправить</button>
-          </form>
         </section>
       </main>
       <footer class="main-footer">
@@ -184,5 +164,28 @@
           <p class="footer-copyright-text">Сделано в <a href="index.html">HTML Academy</a>© 2017</p>
         </div>
       </footer>
+      <section class="modal-windows">
+      <h2 class="visually-hidden">Модальные окна:</h2>
+        <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
+          <label class="user-navigation-search-label" for="input-search">
+            <input class="user-navigation-input" type="search" id="input-search" placeholder="Что ищем?">
+          </label>
+        </form>
+        <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
+          <label class="user-navigation-login-label" for="user-navigation-email">
+            <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
+          </label>
+          <label class="user-navigation-password-label" for="user-navigation-password">
+            <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
+          </label>
+        </form>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
+          <h3 class="feedback-form-title bold">Мы обязательно Вам ответим!</h3>
+          <input class="feedback-form-input" placeholder="Как вас зовут?" autofocus required>
+          <input class="feedback-form-input" placeholder="Ваша почта для ответа?" required>
+          <textarea class="feedback-form-textarea" name="textarea" cols="15" rows="6" required></textarea>
+          <button class="banner-button" type="submit">Отправить</button>
+        </form>
+      </section>
     </body>
   </html>
