@@ -3,33 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <a class="main-header-logo">
         <img src="img/logo.svg" width="160" height="65" alt="Логотип Glassy">
       </a>
       <nav class="main-navigation">
         <ul class="main-navigation-list">
-          <li class="main-navigation-item"><a class="main-navigation-link" href="catalog.html">Каталог</a></li>
-          <li class="main-navigation-item"><a class="main-navigation-link" href="delivery.html">Доставка и оплата</a></li>
-          <li class="main-navigation-item"><a class="main-navigation-link" href="about-us.html">О компании</a></li>
+          <li class="main-navigation-item">
+            <a class="main-navigation-link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="main-navigation-item">
+            <a class="main-navigation-link" href="delivery.html">Доставка и оплата</a>
+          </li>
+          <li class="main-navigation-item">
+            <a class="main-navigation-link" href="about-us.html">О компании</a>
+          </li>
         </ul>
         <section class="user-navigation">
           <h2 class="visually-hidden">Пользовательская навигация</h2>
           <ul class="user-navigation-list">
             <li class="user-navigation-item search" tabindex="0" aria-label="Поиск"></li>
-            <li class="user-navigation-item login" tabindex="0" placeholder="Вход"></li>
+            <li class="user-navigation-item login" tabindex="0">Вход</li>
             <li class="user-navigation-item basket" tabindex="0"><h2 class="visually-hidden">Пусто</h2></li>
           </ul>
         </section>
       </nav>
     </header>
     <main class="container">
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html">Главная</a></li>
-        <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="catalog.html">Каталог</a></li>
-        <li class="breadcrumbs-item"><a class="breadcrumbs-link current" href="catalog.html">Сливочное</a></li>
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link current" href="catalog.html">Сливочное</a>
+        </li>
       </ul>
       <h1 class="main-title">Сливочное мороженое</h1>
       <section class="filters">
@@ -247,29 +262,55 @@
       <section class="pagination">
         <h2 class="visually-hidden">Пагинация</h2>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a href="#" class="current-link">1</a></li>
-          <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
-          <li class="pagination-item"><a class="pagination-link"href="#">3</a></li>
-          <li class="pagination-item"><a class="pagination-link" href="#">4</a></li>
-          <li class="pagination-item"><a class="pagination-link" href="#">5</a></li>
+          <li class="pagination-item pagination-item-current">
+            <a href="#" class="current-link">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">5</a>
+          </li>
         </ul>
       </section>
     </main>
     <footer class="main-footer">
       <div class="social">
         <ul class="social-list">
-          <li class="social-item"><a class="social-link twitter" href="#" aria-label="Twitter"></a></li>
-          <li class="social-item"><a class="social-link instagram" href="#" aria-label="Instagram"></a></li>
-          <li class="social-item"><a class="social-link facebook" href="#" aria-label="Facebook"></a></li>
-          <li class="social-item"><a class="social-link vkontakte" href="#" aria-label="Vkontakte"></a></li>
+          <li class="social-item">
+            <a class="social-link twitter" href="#" aria-label="Twitter"></a>
+          </li>
+          <li class="social-item">
+            <a class="social-link instagram" href="#" aria-label="Instagram"></a>
+          </li>
+          <li class="social-item">
+            <a class="social-link facebook" href="#" aria-label="Facebook"></a>
+          </li>
+          <li class="social-item">
+            <a class="social-link vkontakte" href="#" aria-label="Vkontakte"></a>
+          </li>
         </ul>
       </div>
       <div class="footer-menu">
         <ul class="footer-list">
-          <li class="footer-item"><a href="#" class="footer-link bold">Для поставщиков</a></li>
-          <li class="footer-item"><a href="#" class="footer-link">Наши документы</a></li>
-          <li class="footer-item"><a href="#" class="footer-link">О производстве</a></li>
-          <li class="footer-item"><a href="#" class="footer-link">Экологические стандарты</a></li>
+          <li class="footer-item">
+            <a href="#" class="footer-link bold">Для поставщиков</a>
+          </li>
+          <li class="footer-item">
+            <a href="#" class="footer-link">Наши документы</a>
+          </li>
+          <li class="footer-item">
+            <a href="#" class="footer-link">О производстве</a>
+          </li>
+          <li class="footer-item">
+            <a href="#" class="footer-link">Экологические стандарты</a>
+          </li>
         </ul>
       </div>
       <div class="footer-copyright">
@@ -279,7 +320,8 @@
         <p class="footer-copyright-text">Сделано в <a class="footer-copyright-link" href="index.html">HTML Academy</a>© 2017</p>
       </div>
     </footer>
-    <h2 class="visually-hidden">Модальные окна:</h2>
+    <section class="modal-windows">
+      <h2 class="visually-hidden">Модальные окна:</h2>
       <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
         <label class="user-navigation-search-label" for="input-search">
           <input class="user-navigation-input" type="search" id="input-search" placeholder="Что ищем?">
@@ -293,5 +335,6 @@
           <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
         </label>
       </form>
-    </body>
-  </html>
+    </section>
+  </body>
+</html>
