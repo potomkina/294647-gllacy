@@ -10,7 +10,7 @@
   <body class="inner-page">
     <header class="main-header">
       <a class="main-header-logo">
-        <img src="img/logo.svg" width="160" height="65" alt="Логотип Glassy">
+        <img class="main-logo" src="img/logo.svg" width="160" height="65" alt="Логотип Glassy">
       </a>
       <nav class="main-navigation">
         <ul class="main-navigation-list">
@@ -27,9 +27,24 @@
         <section class="user-navigation">
           <h2 class="visually-hidden">Пользовательская навигация</h2>
           <ul class="user-navigation-list">
-            <li class="user-navigation-item search" tabindex="0" aria-label="Поиск"></li>
-            <li class="user-navigation-item login" tabindex="0">Вход</li>
-            <li class="user-navigation-item basket" tabindex="0"><h2 class="visually-hidden">Пусто</h2></li>
+            <li class="user-navigation-item search" tabindex="0" aria-label="Поиск">
+              <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
+                  <input class="user-navigation-input" type="search" id="input-search" arialabel="Форма поиска" placeholder="Что ищем?">
+              </form>
+            </li>
+            <li class="user-navigation-item login" tabindex="0">Вход
+              <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
+                <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" arialabel="Введите свою почту" placeholder="Электронная почта">
+                <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" arialabel="Введите пароль" placeholder="Пароль">
+                <button class="banner-button" type="submit">Войти</button>
+                <a class="user-navigation-forgot-password" href="#">Забыли пароль?</a>
+                <a class="user-navigation-registration" href="#">Новая регистрация</a>
+              </form>
+            </li>
+            <li class="user-navigation-item basket" tabindex="0"><h2 class="visually-hidden">Пусто</h2>
+              <form class="user-navigation-form form-basket" action="https://echo.htmlacademy.ru" method="get">
+              </form>
+            </li>
           </ul>
         </section>
       </nav>
@@ -69,19 +84,19 @@
             <ul class="filters-fat-list">
               <li class="filters-fat-item">
                 <input class="filters-fat-input" id="choice-one" name="choice" type="radio" value="0">
-                <label for="choice-one">0%</label>
+                <label class="filters-fat-label" for="choice-one">0%</label>
               </li>
               <li class="filters-fat-item">
                 <input class="filters-fat-input" id="choice-second" name="choice" type="radio" value="10" checked>
-                <label for="choice-second">до 10%</label>
+                <label class="filters-fat-label" for="choice-second">до 10%</label>
               </li>
               <li class="filters-fat-item">
                 <input class="filters-fat-input" id="choice-third" name="choice" type="radio" value="0">
-                <label for="choice-third">до 30%</label>
+                <label class="filters-fat-label" for="choice-third">до 30%</label>
               </li>
               <li class="filters-fat-item">
                 <input class="filters-fat-input" id="choice-fourth" name="choice" type="radio" value="0">
-                <label for="choice-fourth">выше 30%</label>
+                <label class="filters-fat-label" for="choice-fourth">выше 30%</label>
               </li>
             </ul>
           </fieldset>
@@ -90,23 +105,23 @@
             <ul class="filters-fillers-list">
               <li class="filters-fillers-item">
                 <input class="filters-fillers-input" id="fillers" type="checkbox" name="chocolate" value="chocolate" checked>
-                <label for="fillers">шоколадные</label>
+                <label class="filters-fillers-label" for="fillers">шоколадные</label>
               </li>
               <li class="filters-fillers-item">
                 <input class="filters-fillers-input" id="sugar" type="checkbox" name="sugar" value="sugar" checked>
-                <label for="sugar">сахарные присыпки</label>
+                <label class="filters-fillers-label" for="sugar">сахарные присыпки</label>
               </li>
               <li class="filters-fillers-item">
                 <input class="filters-fillers-input" id="fruits" type="checkbox" name="fruits" value="fruits">
-                <label for="fruits">фрукты</label>
+                <label class="filters-fillers-label" for="fruits">фрукты</label>
               </li>
               <li class="filters-fillers-item">
                 <input class="filters-fillers-input" id="syrup" type="checkbox" name="syrup" value="syrup">
-                <label for="syrup">сиропы</label>
+                <label class="filters-fillers-label" for="syrup">сиропы</label>
               </li>
               <li class="filters-fillers-item">
                 <input class="filters-fillers-input" id="jam" type="checkbox" name="jam" value="jam">
-                <label for="jam">джемы</label>
+                <label class="filters-fillers-label" for="jam">джемы</label>
               </li>
             </ul>
           </fieldset>
@@ -117,7 +132,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-1.jpg" alt="Сливочное с апельсиновым джемом" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-1.jpg" alt="Сливочное с апельсиновым джемом" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">310 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -129,7 +144,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-2.jpg" alt="Сливочно-кофейное" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-2.jpg" alt="Сливочно-кофейное" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">380 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -141,7 +156,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-3.jpg" alt="Сливочно-клубничное" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-3.jpg" alt="Сливочно-клубничное" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">355 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -153,7 +168,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-4.jpg" alt="Сливочное крем-брюле" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-4.jpg" alt="Сливочное крем-брюле" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">415 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -165,7 +180,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-5.jpg" alt="Сливочное с брусничным" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-5.jpg" alt="Сливочное с брусничным" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">325 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -177,7 +192,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-6.jpg" alt="Сливочно-черничное" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-6.jpg" alt="Сливочно-черничное" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">410 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -189,7 +204,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-7.jpg" alt="Сливочно-лимонное" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-7.jpg" alt="Сливочно-лимонное" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">375 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -201,7 +216,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">320 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -213,7 +228,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-9.jpg" alt="Сливочно-ванильное" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-9.jpg" alt="Сливочно-ванильное" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">440 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -225,7 +240,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-10.jpg" alt="Сливочное с ментоловым сиропом" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-10.jpg" alt="Сливочное с ментоловым сиропом" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">435 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -237,7 +252,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">335 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -249,7 +264,7 @@
         <article class="catalog-item">
           <p class="catalog-item-container">
             <a class="catalog-item-link" href="#">
-              <img src="img/catalog-item-12.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
+              <img class="catalog-item-image" src="img/catalog-item-12.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
               <p class="catalog-item-price-container">
                 <span class="catalog-item-price bold">420 Р</span>
                 <span class="catalog-item-weight">/кг</span>
@@ -315,7 +330,7 @@
       </div>
       <div class="footer-copyright">
         <p class="footer-copyright-logo">
-          <img src="img/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="110" height="42">
+          <img class="copyright-logo" src="img/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="110" height="42">
         </p>
         <p class="footer-copyright-text">Сделано в <a class="footer-copyright-link" href="index.html">HTML Academy</a>© 2017</p>
       </div>
