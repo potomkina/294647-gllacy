@@ -31,13 +31,14 @@ fieldset {
 }
 
 .visually-hidden {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect (0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
 }
 
 .main-navigation {
@@ -99,13 +100,10 @@ fieldset {
   text-decoration: none;
 }
 
-.breadcrumbs-link-current {
+.breadcrumbs-link.current {
   text-decoration: none;
 }
 
-.hidden-label {
-  font-size: 0px;
-}
 
 .bold {
   font-weight: bold;
@@ -402,39 +400,13 @@ fieldset {
 }
 
 .breadcrumbs-link,
-.breadcrumbs-link-current {
+.breadcrumbs-link.current {
   color: #ffffff;
   text-decoration: underline;
 }
 
-.breadcrumbs-link-current {
+.breadcrumbs-link.current {
   text-decoration: none;
-}
-
-.pagination-link {
-  color: #ffffff;
-}
-
-.pagination-link:hover,
-.pagination-link:active,
-.pagination-link:focus {
-      color: #e84d37;
-  }
-
-.pagination-link-current {
-  color: #323232;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.pagination-link:hover{
-  color: #ffffff;
-}
-
-.pagination-link:active,
-.pagination-link:focus {
-  color: #323232;
-  background-color: #ffffff;
 }
 
 .pagination-item {
@@ -450,11 +422,38 @@ fieldset {
   background-color: #9db1a5;
 }
 
-.pagination-item-current {
+.pagination-item.current {
   width: 26px;
   height: 25px;
   border-radius: 15px;
   background-color: #ffffff;
+  color: #323232;
   text-align: center;
   vertical-align: middle;
+}
+
+.pagination-link {
+  color: #ffffff;
+}
+
+.pagination-link:hover,
+.pagination-link:active,
+.pagination-link:focus {
+      color: #e84d37;
+  }
+
+.pagination-link.current {
+  color: #323232;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pagination-link:hover{
+  color: #ffffff;
+}
+
+.pagination-link:active,
+.pagination-link:focus {
+  color: #323232;
+  background-color: #ffffff;
 }
