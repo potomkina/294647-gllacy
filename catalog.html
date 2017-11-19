@@ -29,21 +29,23 @@
           <ul class="user-navigation-list">
             <li class="user-navigation-item search" tabindex="0" aria-label="Поиск">
               <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
-                  <input class="user-navigation-input" type="search" id="input-search" arialabel="Форма поиска" placeholder="Что ищем?">
+                <label for="input-search" class="hidden-label">Форма поиска</label>
+                <input class="user-navigation-search-input" type="search" id="input-search" placeholder="Что ищем?">
               </form>
             </li>
             <li class="user-navigation-item login" tabindex="0">Вход
               <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
-                <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" arialabel="Введите свою почту" placeholder="Электронная почта">
-                <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" arialabel="Введите пароль" placeholder="Пароль">
-                <button class="banner-button" type="submit">Войти</button>
-                <a class="user-navigation-forgot-password" href="#">Забыли пароль?</a>
-                <a class="user-navigation-registration" href="#">Новая регистрация</a>
+                <label for="user-navigation-email" class="hidden-label">Введите свою почту</label>
+                <input class="user-navigation-login-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
+                <label for="user-navigation-password" class="hidden-label">Введите пароль</label>
+                <input class="user-navigation-login-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
+                <button class="btn" type="submit">Войти</button>
+                <a class="user-navigation-btn" href="#">Забыли пароль?</a>
+                <a class="user-navigation-btn" href="#">Новая регистрация</a>
               </form>
             </li>
-            <li class="user-navigation-item basket" tabindex="0"><h2 class="visually-hidden">Пусто</h2>
-              <form class="user-navigation-form form-basket" action="https://echo.htmlacademy.ru" method="get">
-              </form>
+            <li class="user-navigation-item basket" tabindex="0">
+              <h2 class="visually-hidden">Пусто</h2>
             </li>
           </ul>
         </section>
@@ -58,7 +60,7 @@
           <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link current" href="catalog.html">Сливочное</a>
+          <a class="breadcrumbs-link-current" href="catalog.html">Сливочное</a>
         </li>
       </ul>
       <h1 class="main-title">Сливочное мороженое</h1>
@@ -278,7 +280,7 @@
         <h2 class="visually-hidden">Пагинация</h2>
         <ul class="pagination-list">
           <li class="pagination-item pagination-item-current">
-            <a href="#" class="current-link">1</a>
+            <a href="#" class="pagination-link-current">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -299,16 +301,24 @@
       <div class="social">
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link twitter" href="#" aria-label="Twitter"></a>
+            <a class="social-link twitter" href="#" aria-label="Twitter">
+              <img class="social-image" src="img/twitter.svg" width="31" height="31" alt="twitter">
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link instagram" href="#" aria-label="Instagram"></a>
+            <a class="social-link instagram" href="#" aria-label="Instagram">
+              <img class="social-image" src="img/instagram.svg" width="31" height="31" alt="instagram">
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link facebook" href="#" aria-label="Facebook"></a>
+            <a class="social-link facebook" href="#" aria-label="Facebook">
+              <img class="social-image" src="img/fb.svg" width="31" height="31" alt="facebook">
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link vkontakte" href="#" aria-label="Vkontakte"></a>
+            <a class="social-link vkontakte" href="#" aria-label="Vkontakte">
+              <img class="social-image" src="img/vk.svg" width="31" height="31" alt="vkontakte">
+            </a>
           </li>
         </ul>
       </div>
@@ -337,18 +347,14 @@
     </footer>
     <section class="modal-windows">
       <h2 class="visually-hidden">Модальные окна:</h2>
-      <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
-        <label class="user-navigation-search-label" for="input-search">
-          <input class="user-navigation-input" type="search" id="input-search" placeholder="Что ищем?">
-        </label>
-      </form>
-      <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
-        <label class="user-navigation-login-label" for="user-navigation-email">
-          <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
-        </label>
-        <label class="user-navigation-password-label" for="user-navigation-password">
-          <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
-        </label>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
+        <h3 class="feedback-form-title bold">Мы обязательно Вам ответим!</h3>
+        <label class="hidden-label">Ваше имя:</label>
+        <input class="feedback-form-input" placeholder="Как вас зовут?" autofocus required>
+        <label class="hidden-label">Ваша почта:</label>
+        <input class="feedback-form-input" placeholder="Ваша почта для ответа?" required>
+        <textarea class="feedback-form-textarea" name="textarea" cols="15" rows="6" placeholder="Напишите что-нибудь..." required></textarea>
+        <button class="btn" type="submit">Отправить</button>
       </form>
     </section>
   </body>
