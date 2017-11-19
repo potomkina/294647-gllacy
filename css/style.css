@@ -14,24 +14,12 @@ body {
   background-color: #849d8f;
 }
 
-a {
-  text-decoration: none;
-}
-
-input:hover {
-  border: 2px solid #c7c6c5;
-}
-
-input:focus {
-  border: 2px solid #8fbdec;
-}
-
-fieldset {
+.filters-group {
   border: none;
 }
 
 .visually-hidden {
-	position: absolute;
+  position: absolute;
 	clip: rect(1px, 1px, 1px, 1px);
 	padding:0;
 	border:0;
@@ -258,13 +246,13 @@ fieldset {
   font-weight: 700;
 }
 
-.our-news-link {
+.our-news-blog-link {
   color: #323232;
   text-decoration: underline;
 }
 
-.our-news-link:hover,
-.our-news-link:active {
+.our-news-blog-link:hover,
+.our-news-blog-link:active {
   color: #ffbc9e;
 }
 
