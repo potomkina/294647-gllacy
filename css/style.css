@@ -807,3 +807,7 @@ body {
   color: #323232;
   background-color: #ffffff;
 }
+
+.inner-page .main-header {
+  margin-bottom: 5px;
+}
