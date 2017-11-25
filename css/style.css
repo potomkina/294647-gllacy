@@ -31,9 +31,9 @@ body {
 
 .main-header {
   margin-bottom: 270px;
-  min-height: 120px;
 
   /* Временно для сетки */
+  min-height: 120px;
   outline: 3px solid red;
 }
 
@@ -46,30 +46,32 @@ body {
   color: #ffffff;
   text-decoration: underline;
   background-color: #849d8f;
+
+  /* Временно для сетки */
   min-height: 115px;
   outline: 3px solid grey;
 }
 
 .main-navigation-list {
   width: 387px;
-  min-height: 60px;
   margin: 0;
   padding: 0;
   list-style: none;
   margin-right: 293px;
 
   /* Временно для сетки */
+  min-height: 60px;
   outline: 3px solid brown;
 }
 
 .user-navigation-list {
+  width: 267px;
   margin: 0;
   padding: 0;
   list-style: none;
   margin: 0 10px;
 
   /* Временно для сетки */
-  width: 267px;
   min-height: 60px;
   outline: 3px solid yellow;
 }
@@ -149,7 +151,7 @@ body {
 
 .main-navigation-item,
 .user-navigation-item {
-  display: inline;
+  display: inline-block;
 }
 
 .main-navigation-wrapper {
@@ -166,6 +168,7 @@ body {
 }
 
 .slider {
+  min-width: 940px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -174,35 +177,34 @@ body {
   margin-bottom: 35px;
 
   /* Временно для сетки */
-  min-width: 940px;
   min-height: 210px;
   outline: 3px solid orange;
 }
 
 .slider-title {
+  width: 682px;
   font-weight: 700;
   font-size: 60px;
   line-height: 80px;
   text-align: center;
-  width: 682px;
   align-self: center;
-  min-height: 120px;
 
-  /*временно для сетки*/
+  /*Временно для сетки*/
+  min-height: 120px;
   outline: 3px dashed red;
 }
 
 .slider .btn {
   width: 277px;
   align-self: center;
-  min-height: 69px;
   outline: 3px dashed red;
   font-size: 32px;
   line-height: 44px;
   border-radius: 20px;
-
-  /*для сетки*/
   margin-bottom: 35px;
+
+  /*Временно для сетки*/
+  min-height: 69px;
 }
 
 .breadcrumbs-link.current {
@@ -243,14 +245,14 @@ body {
 .slider .btn {
   width: 277px;
   align-self: center;
-  min-height: 69px;
-  outline: 3px dashed red;
   font-size: 32px;
   line-height: 44px;
   border-radius: 20px;
-
-  /*для сетки*/
   margin-bottom: 35px;
+
+  /*Временно для сетки*/
+  min-height: 69px;
+  outline: 3px dashed red;
 }
 
 .btn:hover,
@@ -272,7 +274,6 @@ body {
   margin-bottom: 35px;
 
   /* Временно для сетки */
-  width: 1146px;
   min-height: 230px;
   outline: 3px dashed blue;
 }
@@ -281,13 +282,13 @@ body {
   width: 560px;
   padding: 20px;
   padding-top: 0px;
-  margin: auto;
+  margin: 0;
+  padding: 0;
+
   /* Временно для сетки */
-  width: 1146px;
   min-height: 230px;
   outline: 3px dashed pink;
 }
-
 
 .raspberry {
   display: block;
@@ -422,7 +423,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  }
+}
 
 .about-us-item {
   width: 540px;
@@ -437,7 +438,6 @@ body {
   /* Временно для сетки */
   min-height: 85px;
   outline: 3px dashed lightblue;
-  /*Абсолютное позиционирование?*/
 }
 
 .about-us-title {
@@ -789,8 +789,8 @@ body {
 .pagination-link:hover,
 .pagination-link:active,
 .pagination-link:focus {
-      color: #e84d37;
-  }
+  color: #e84d37;
+}
 
 .pagination-link.current {
   color: #323232;
