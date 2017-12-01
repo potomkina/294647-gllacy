@@ -35,7 +35,7 @@
                 <h2 class="visually-hidden">Пользовательская навигация</h2>
                 <ul class="user-navigation-list">
                   <li class="user-navigation-item search" tabindex="0" aria-label="Поиск">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
+                    <svg class="user-navigation-search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
                     viewBox="0 0 17 17"><path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0
                      1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019
                      2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
@@ -46,7 +46,7 @@
                     </form>
                   </li>
                   <li class="user-navigation-item login" tabindex="0">Вход
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
+                    <svg class="user-navigation-login-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
                      viewBox="0 0 21 19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18
                         0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g>
                     </svg>
@@ -61,6 +61,10 @@
                     </form>
                   </li>
                   <li class="user-navigation-item basket" tabindex="0">Пусто
+                    <svg class="user-navigation-basket-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g><path
+                    d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.0
+                    31h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g>
+                    </svg>
                     <form class="user-navigation-form form-basket" action="https://echo.htmlacademy.ru" method="get">
                       <table class="user-navigation-basket-list">
                         <tr class="user-navigation-basket-item">
@@ -193,16 +197,16 @@
         <h3 class="about-us-title">Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого
         собственного производства на развес</h3>
         <ul class="about-us-list">
-          <li class="about-us-item-ice">Все наше мороженое изготавливается на собственном производстве, с использованием
+          <li class="about-us-item ice">Все наше мороженое изготавливается на собственном производстве, с использованием
           современного оборудования и проверенных времен технологий.</li>
-          <li class="about-us-item-eco">Для приготовления мороженого используются
+          <li class="about-us-item eco">Для приготовления мороженого используются
           настоящие сливки и молоко высочайшего качества.
           Все дополнительные ингредиенты и добавки произведены из натурального,
           экологически чистого сырья.</li>
-          <li class="about-us-item-cow">Закупка ингредиентов производится только у
+          <li class="about-us-item cow">Закупка ингредиентов производится только у
           проверенных фермерских хозяйств и компаний,с которыми нас
           связывает долгое сотрудничество.</li>
-          <li class="about-us-item-themperature">Доставка нашего мороженого до заказчиков
+          <li class="about-us-item themperature">Доставка нашего мороженого до заказчиков
           осуществляется в специальном термопаке, который не дает мороженому
           растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
@@ -241,7 +245,7 @@
           <ul class="social-list">
             <li class="social-item">
               <a class="social-link twitter" href="#" aria-label="Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.164
+                <svg class="social-icon tw" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M16 0C7.164 0 0 7.164
                 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992
                 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.
                 289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-
@@ -253,7 +257,7 @@
             </li>
             <li class="social-item">
               <a class="social-link instagram" href="#" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M20.916 16a4.938 4.938
+                <svg class="social-icon instagram" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g><path d="M20.916 16a4.938 4.938
                   0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.
                   746.137 1.14z"/><path d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.
                   659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637
@@ -266,7 +270,7 @@
             </li>
             <li class="social-item">
               <a class="social-link facebook" href="#" aria-label="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF"
+                <svg class="social-icon fb" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path
                   d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062
                    9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902
                     1.353-3.445 3.021-3.445h3.021v3.445z"/>
@@ -275,7 +279,7 @@
             </li>
             <li class="social-item">
               <a class="social-link vkontakte" href="#" aria-label="Vkontakte">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF">
+                <svg class="social-icon vk" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g>
                   <path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.
                   15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76
                   .242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.
@@ -316,7 +320,7 @@
          </div>
        </div>
      </footer>
-     <section class="modal-window">
+     <section class="modal modal-window">
        <h2 class="visually-hidden">Модальное окно:</h2>
        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
          <h3 class="feedback-form-title bold">Мы обязательно Вам ответим!</h3>
@@ -326,6 +330,7 @@
          <input class="feedback-form-input" id="feedback-form-mail" placeholder="Ваша почта для ответа?" required>
          <textarea class="feedback-form-textarea" name="textarea" cols="15" rows="6" placeholder="Напишите что-нибудь..." required></textarea>
          <button class="btn" type="submit">Отправить</button>
+         <button class="modal-close" type="button">Закрыть</button>
        </form>
      </section>
    </div>
