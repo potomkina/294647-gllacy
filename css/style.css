@@ -221,7 +221,6 @@ input[type="radio"].visually-hidden {
   display: block;
   position: absolute;
   width: 540px;
-  height: 240px;
   z-index: 2;
   top: 40px;
   left: -150px;
@@ -577,6 +576,8 @@ input[type="radio"].visually-hidden {
 
 .about-us {
   position: relative;
+  width: 1146px;
+  height: 310px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -597,8 +598,9 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us-item {
+  position: relative;
   display: block;
-  width: 480px;
+  width: 540px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -619,43 +621,65 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
+.ice {
+  position: absolute;
+  content: "";
+  top: 90px;
+  left: 15px;
+  margin-right: 10px;
+}
+
+.eco {
+  position: absolute;
+  content: "";
+  top: 180px;
+  left: 15px;
+}
+
 .ice::before {
-  top: 5px;
-  left: 5px;
+  position: absolute;
+  top: -5px;
+  left: 0px;
   background-image: url("../img/ice-cream.svg");
 }
 
 .eco::before {
-  top: 5px;
-  left: 5px;
+  position: absolute;
+  top: -5px;
+  left: 0px;
   background-image: url("../img/eco.svg");
 }
 
 .cow {
   position: absolute;
   content: "";
-  top: 100px;
+  top: 90px;
   right: 0px;
 }
 
 .cow::before {
-  top: 5px;
-  right: 525px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-image: url("../img/cow.svg");
 }
 
 .themperature {
   position: absolute;
   content: "";
-  top: 190px;
+  top: 180px;
   right: 0px;
 }
 
 .themperature::before {
   position: absolute;
   content: "";
-  top: 5px;
-  right: 525px;
+  top: -5px;
+  left: -5px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-image: url("../img/thermometer.svg");
 }
 
@@ -865,7 +889,8 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-list {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   width: 340px;
   list-style: none;
   padding: 0;
@@ -873,36 +898,16 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-item {
-  position: relative;
   font-size: 13px;
   line-height: 18px;
   padding: 0;
   margin: 0;
+  margin-right: 30px;
   cursor: pointer;
 }
 
 .footer-item:first-child {
-  position: absolute;
-  left: 25px;
-  top: 10px;
-}
-
-.footer-item:nth-child(2) {
-  position: absolute;
-  left: 160px;
-  top: 10px;
-}
-
-.footer-item:nth-child(3) {
-  position: absolute;
-  top: 30px;
-  left: 25px;
-}
-
-.footer-item:nth-child(4) {
-  position: absolute;
-  top: 30px;
-  left: 160px;
+  position: relative;
 }
 
 .footer-item:first-child::before {
