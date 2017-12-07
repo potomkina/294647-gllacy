@@ -45,21 +45,21 @@
                    viewBox="0 0 21 19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18
                    0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g>
                    </svg>
-                   <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
-                     <label for="user-navigation-email" class="visually-hidden">Введите свою почту</label>
-                     <input class="user-navigation-login-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
-                     <label for="user-navigation-password" class="visually-hidden">Введите пароль</label>
-                     <input class="user-navigation-login-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
-                     <button class="btn" type="submit">Войти</button>
-                     <a class="user-navigation-btn" href="#">Забыли пароль?</a>
-                     <a class="user-navigation-btn" href="#">Новая регистрация</a>
-                   </form>
+                   <section class="modal-entry">
+                     <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
+                       <label for="user-navigation-email" class="visually-hidden">Введите свою почту</label>
+                       <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
+                       <label for="user-navigation-password" class="visually-hidden">Введите пароль</label>
+                       <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
+                       <button class="btn" type="submit">Войти</button>
+                       <a class="user-navigation-link-top" href="#">Забыли пароль?</a>
+                       <a class="user-navigation-link-bottom" href="#">Новая регистрация</a>
+                     </form>
+                   </section>
                  </li>
-                <li class="user-navigation-item basket" tabindex="0">
+                <li class="user-navigation-item basket" tabindex="0">2 товара
                   <h2 class="visually-hidden">Пусто</h2>
-                  <svg class="user-navigation-basket-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g><path
-                  d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.0
-                  31h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g>
+                  <svg class="user-navigation-basket-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g>
                   </svg>
                 </li>
               </ul>
@@ -67,14 +67,22 @@
           </div>
         </div>
       </nav>
+      <div class="schedule">
+        <span class="shedule-item clock">С 10 до 20, ежедневно</span>
+        <span class="shedule-item phone">8 812 450-25-25</span>
+      </div>
     </header>
     <main class="container">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
+        <li class="breadcrumbs-item-symbol">>
+        </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="breadcrumbs-item-symbol">>
         </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link current" href="catalog.html">Сливочное</a>
@@ -84,7 +92,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="filters-group">
+          <fieldset class="filters-group-sorting">
             <legend class="filters-sorting-title">Сортировка:</legend>
             <select class="filters-sorting-list" name="multiple-list">
               <option class="filters-sorting-item" value="popular">по популярности</option>
@@ -93,12 +101,12 @@
               <option class="filters-sorting-item" value="fat">по жирности</option>
             </select>
           </fieldset>
-          <fieldset class="filters-group">
+          <fieldset class="filters-group-price">
             <legend class="filters-price-title">Цена: 100 руб. - 500 руб.</legend>
             <div class="filters-price-item" tabindex="0">
             </div>
           </fieldset>
-          <fieldset class="filters-group">
+          <fieldset class="filters-group-fat">
             <legend class="filters-fat-title">Жирность:</legend>
             <ul class="filters-fat-list">
               <li class="filters-fat-item">
@@ -119,7 +127,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filters-group">
+          <fieldset class="filters-group-fillers">
             <legend class="filters-fillers-title">Наполнители:</legend>
             <ul class="filters-fillers-list">
               <li class="filters-fillers-item">
@@ -143,6 +151,7 @@
                 <label class="filters-fillers-label" for="jam">джемы</label>
               </li>
             </ul>
+            <button class="form-btn" type="submit">Применить</button>
           </fieldset>
         </form>
       </section>
@@ -353,13 +362,13 @@
               <a href="#" class="footer-link bold">Для поставщиков</a>
             </li>
             <li class="footer-item">
-              <a href="#" class="footer-link">Наши документы</a>
+              <a href="#" class="footer-link documents">Наши документы</a>
             </li>
             <li class="footer-item">
-              <a href="#" class="footer-link">О производстве</a>
+              <a href="#" class="footer-link about-creating">О производстве</a>
             </li>
             <li class="footer-item">
-              <a href="#" class="footer-link">Экологические стандарты</a>
+              <a href="#" class="footer-link eco-standart">Экологические стандарты</a>
             </li>
           </ul>
         </div>

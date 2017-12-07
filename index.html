@@ -28,7 +28,7 @@
                   <a class="main-navigation-link" href="delivery.html">Доставка и оплата</a>
                 </li>
                 <li class="main-navigation-item">
-                  <a class="main-navigation-link" href="about-us.html">О компании</a>
+                  <a class="main-navigation-link" href="about-us.html">О Компании</a>
                 </li>
               </ul>
               <section class="user-navigation">
@@ -50,20 +50,20 @@
                      viewBox="0 0 21 19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18
                         0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g>
                     </svg>
-                    <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
-                      <label for="user-navigation-email" class="visually-hidden">Введите свою почту</label>
-                      <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
-                      <label for="user-navigation-password" class="visually-hidden">Введите пароль</label>
-                      <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
-                      <button class="btn" type="submit">Войти</button>
-                      <a class="user-navigation-btn" href="#">Забыли пароль?</a>
-                      <a class="user-navigation-btn" href="#">Новая регистрация</a>
-                    </form>
+                    <section class="modal-entry">
+                      <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
+                        <label for="user-navigation-email" class="visually-hidden">Введите свою почту</label>
+                        <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
+                        <label for="user-navigation-password" class="visually-hidden">Введите пароль</label>
+                        <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
+                        <button class="btn" type="submit">Войти</button>
+                        <a class="user-navigation-link-top" href="#">Забыли пароль?</a>
+                        <a class="user-navigation-link-bottom" href="#">Новая регистрация</a>
+                      </form>
+                    </section>
                   </li>
                   <li class="user-navigation-item basket" tabindex="0">Пусто
-                    <svg class="user-navigation-basket-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g><path
-                    d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.0
-                    31h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g>
+                    <svg class="user-navigation-basket-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g>
                     </svg>
                     <form class="user-navigation-form form-basket" action="https://echo.htmlacademy.ru" method="get">
                       <table class="user-navigation-basket-list">
@@ -110,7 +110,7 @@
             <h3 class="slide-title">
               Крем-брюле и пломбир с малиновым джемом
             </h3>
-            <a class="slide-button btn" href="#">Давайте оба!</a>
+            <a class="slide-button-main btn" href="#">Давайте оба!</a>
           </li>
           <li class="slider-item slide" id="slide2">
             <h3 class="slide-title">
@@ -197,18 +197,34 @@
         <h3 class="about-us-title">Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого
         собственного производства на развес</h3>
         <ul class="about-us-list">
-          <li class="about-us-item ice">Все наше мороженое изготавливается на собственном производстве, с использованием
-          современного оборудования и проверенных времен технологий.</li>
-          <li class="about-us-item cow">Закупка ингредиентов производится только у
-          проверенных фермерских хозяйств и компаний,с которыми нас
-          связывает долгое сотрудничество.</li>
-          <li class="about-us-item eco">Для приготовления мороженого используются
-          настоящие сливки и молоко высочайшего качества.
-          Все дополнительные ингредиенты и добавки произведены из натурального,
-          экологически чистого сырья.</li>
-          <li class="about-us-item themperature">Доставка нашего мороженого до заказчиков
-          осуществляется в специальном термопаке, который не дает мороженому
-          растаять в пути и позволяет сохранить превосходный вкус.</li>
+          <li class="about-us-item ice">
+            <p class="about-us-item-text">
+              Все наше мороженое изготавливается на собственном производстве, с использованием
+              современного оборудования и проверенных временeм технологий.
+            </p>
+          </li>
+          <li class="about-us-item cow">
+            <p class="about-us-item-text">
+            Закупка ингредиентов производится только у
+            проверенных фермерских хозяйств и компаний,с которыми нас
+            связывает долговременное сотрудничество.
+            </p>
+          </li>
+          <li class="about-us-item eco">
+            <p class="about-us-item-text">
+            Для приготовления мороженого используются
+            настоящие сливки и молоко высочайшего качества.
+            Все дополнительные ингредиенты и добавки произведены из натурального,
+            экологически чистого сырья.
+            </p>
+          </li>
+          <li class="about-us-item themperature">
+            <p class="about-us-item-text">
+            Доставка нашего мороженого до заказчиков
+            осуществляется в специальном термопаке, который не дает мороженому
+            растаять в пути и позволяет сохранить превосходный вкус.
+            </p>
+          </li>
         </ul>
       </section>
       <section class="our-news">
@@ -232,9 +248,9 @@
           <h2 class="visually-hidden">Наши контакты</h2>
           <p class="contacts-adress">Адрес главного офиса и офлайн-магазина:</p>
             <span class="contacts-adress bold">ул.Большая Конюшенная 19/8, Санкт-Петербург</span>
-            <span class="contacts-adress">Для заказов по телефону:</span>
+            <span class="contacts-adress-for-order">Для заказов по телефону:</span>
             <span class="contacts-phone bold">8 812 450-25-25</span>
-            <p class="contacts-phone">(с 10 до 20 ежедневно)</p>
+            <p class="contacts-schedule">(с 10 до 20 ежедневно)</p>
             <a class="contacts-button btn" href="#">Форма обратной связи</a>
         </div>
       </section>
@@ -278,13 +294,13 @@
                <a href="#" class="footer-link bold">Для поставщиков</a>
              </li>
              <li class="footer-item">
-               <a href="#" class="footer-link">Наши документы</a>
+               <a href="#" class="footer-link documents">Наши документы</a>
              </li>
              <li class="footer-item">
-               <a href="#" class="footer-link">О производстве</a>
+               <a href="#" class="footer-link about-creating">О производстве</a>
              </li>
              <li class="footer-item">
-               <a href="#" class="footer-link">Экологические стандарты</a>
+               <a href="#" class="footer-link eco-standart">Экологические стандарты</a>
              </li>
            </ul>
          </div>
@@ -301,11 +317,11 @@
        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
          <h3 class="feedback-form-title bold">Мы обязательно Вам ответим!</h3>
          <label for="feedback-form-name" class="visually-hidden">Ваше имя:</label>
-         <input class="feedback-form-input" placeholder="Как вас зовут?" id="feedback-form-name" autofocus required>
+         <input class="feedback-form-input" type="text" placeholder="Как вас зовут?" id="feedback-form-name" autofocus required>
          <label for="feedback-form-mail" class="visually-hidden">Ваша почта:</label>
-         <input class="feedback-form-input" id="feedback-form-mail" placeholder="Ваша почта для ответа?" required>
+         <input class="feedback-form-input" type="email" id="feedback-form-mail" placeholder="Ваша почта для ответа?" required>
          <textarea class="feedback-form-textarea" name="textarea" cols="15" rows="6" placeholder="Напишите что-нибудь..." required></textarea>
-         <button class="btn" type="submit">Отправить</button>
+         <button class="btn modal-button" type="submit">Отправить</button>
          <button class="modal-close" type="button">Закрыть</button>
        </form>
      </section>
