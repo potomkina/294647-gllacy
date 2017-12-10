@@ -50,42 +50,24 @@
                      viewBox="0 0 21 19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18
                         0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g>
                     </svg>
-                    <section class="modal-entry">
+                    <div class ="form-login-container">
                       <form class="user-navigation-form form-login" action="https://echo.htmlacademy.ru" method="get">
                         <label for="user-navigation-email" class="visually-hidden">Введите свою почту</label>
                         <input class="user-navigation-input" type="email" id="user-navigation-email" name="e-mail" placeholder="Электронная почта">
                         <label for="user-navigation-password" class="visually-hidden">Введите пароль</label>
                         <input class="user-navigation-input" type="password" id="user-navigation-password" name="password" placeholder="Пароль">
-                        <button class="btn" type="submit">Войти</button>
-                        <a class="user-navigation-link-top" href="#">Забыли пароль?</a>
-                        <a class="user-navigation-link-bottom" href="#">Новая регистрация</a>
+                        <button class="btn user-navigation-button" type="submit">Войти</button>
+                        <div class="user-navigation-links">
+                          <a class="user-navigation-link-top" href="#">Забыли пароль?</a>
+                          <a class="user-navigation-link-bottom" href="#">Новая регистрация</a>
+                        </div>
                       </form>
-                    </section>
+                    </div>
                   </li>
                   <li class="user-navigation-item basket" tabindex="0">Пусто
                     <svg class="user-navigation-basket-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g>
                     </svg>
                     <form class="user-navigation-form form-basket" action="https://echo.htmlacademy.ru" method="get">
-                      <table class="user-navigation-basket-list">
-                        <tr class="user-navigation-basket-item">
-                          <td class="basket-cross"></td>
-                          <td class="basket-mini-ice"></td>
-                          <td class="basket-title">Пломбир с апельсиновым джемом</td>
-                          <td class="basket-weight">1,5кг х </td>
-                          <td class="basket-price">200 руб.</td>
-                          <td class="basket-sum">300 руб.</td>
-                        </tr>
-                        <tr>
-                          <td class="basket-cross"></td>
-                          <td class="basket-mini-ice"></td>
-                          <td class="basket-title">Клубничный пломбир с присыпкой из белого шоколада</td>
-                          <td class="basket-weight">1,5кг х </td>
-                          <td class="basket-price">300 руб.</td>
-                          <td class="basket-sum">450 руб.</td>
-                        </tr>
-                        <tr class="basket-main-sum">Итого: 750 руб.</tr>
-                        <input type="submit" class="btn basket-btn"  id="user-navigation-basket" value="Отправить">
-                      </table>
                     </form>
                   </li>
                 </ul>
@@ -110,7 +92,7 @@
             <h3 class="slide-title">
               Крем-брюле и пломбир с малиновым джемом
             </h3>
-            <a class="slide-button-main btn" href="#">Давайте оба!</a>
+            <a class="slide-button btn" href="#">Давайте оба!</a>
           </li>
           <li class="slider-item slide" id="slide2">
             <h3 class="slide-title">
@@ -144,52 +126,56 @@
       <section class="hit-products">
         <h2 class="visually-hidden">Популярные продукты</h2>
         <article class="catalog-item">
-          <p class="catalog-item-container">
-            <a class="catalog-item-link" href="#">
-              <img class="catalog-item-image" src="img/catalog-item-1.jpg" alt="Сливочное с апельсиновым джемом" width="267" height="267">
-              <p class="catalog-item-price-container">
-                <span class="catalog-item-price bold">310 Р</span>
-                <span class="catalog-item-weight">/кг</span>
-              </p>
-              <p class="catalog-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-            </a>
-          </p>
+          <a class="catalog-item-link" href="#">
+            <img class="catalog-item-image" src="img/catalog-item-1.jpg" alt="Сливочное с апельсиновым джемом" width="267" height="267">
+            <p class="catalog-item-price-container">
+              <span class="catalog-item-price bold">310 ₽</span>
+              <span class="catalog-item-weight">/кг</span>
+            </p>
+            <a class="catalog-item-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </a>
+          <div class="catalog-item-mask">
+            <a class="btn mask-button" href="#">Быстрый просмотр</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <p class="catalog-item-container">
-            <a class="catalog-item-link" href="#">
-              <img class="catalog-item-image" src="img/catalog-item-2.jpg" alt="Сливочно-кофейное" width="267" height="267">
-              <p class="catalog-item-price-container">
-                <span class="catalog-item-price bold">380 Р</span>
-                <span class="catalog-item-weight">/кг</span>
-              </p>
-              <p class="catalog-item-text">Сливочно-кофейное с кусочками шоколада</p>
-            </a>
-          </p>
+          <a class="catalog-item-link" href="#">
+            <img class="catalog-item-image" src="img/catalog-item-2.jpg" alt="Сливочно-кофейное" width="267" height="267">
+            <p class="catalog-item-price-container">
+              <span class="catalog-item-price bold">380 ₽</span>
+              <span class="catalog-item-weight">/кг</span>
+            </p>
+            <a class="catalog-item-text">Сливочно-кофейное с кусочками шоколада</a>
+          </a>
+          <div class="catalog-item-mask">
+            <a class="btn mask-button" href="#">Быстрый просмотр</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <p class="catalog-item-container">
-            <a class="catalog-item-link" href="#">
-              <img class="catalog-item-image" src="img/catalog-item-3.jpg" alt="Сливочно-клубничное" width="267" height="267">
-              <p class="catalog-item-price-container">
-                <span class="catalog-item-price bold">355 Р</span>
-                <span class="catalog-item-weight">/кг</span>
-              </p>
-              <p class="catalog-item-text">Сливочно-клубничное с присыпкой из белого шоколада</p>
-            </a>
-          </p>
+          <a class="catalog-item-link" href="#">
+            <img class="catalog-item-image" src="img/catalog-item-3.jpg" alt="Сливочно-клубничное" width="267" height="267">
+            <p class="catalog-item-price-container">
+              <span class="catalog-item-price bold">355 ₽</span>
+              <span class="catalog-item-weight">/кг</span>
+            </p>
+            <a class="catalog-item-text">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </a>
+          <div class="catalog-item-mask">
+            <a class="btn mask-button" href="#">Быстрый просмотр</a>
+          </div>
         </article>
         <article class="catalog-item">
-          <p class="catalog-item-container">
-            <a class="catalog-item-link" href="#">
-              <img class="catalog-item-image" src="img/catalog-item-4.jpg" alt="Сливочное крем-брюле" width="267" height="267">
-              <p class="catalog-item-price-container">
-                <span class="catalog-item-price bold">415 Р</span>
-                <span class="catalog-item-weight">/кг</span>
-              </p>
-              <p class="catalog-item-text">Сливочное крем-брюле с карамельной подливкой</p>
-            </a>
-          </p>
+          <a class="catalog-item-link" href="#">
+            <img class="catalog-item-image" src="img/catalog-item-4.jpg" alt="Сливочное крем-брюле" width="267" height="267">
+            <p class="catalog-item-price-container">
+              <span class="catalog-item-price bold">415 ₽</span>
+              <span class="catalog-item-weight">/кг</span>
+            </p>
+            <a class="catalog-item-text">Сливочное крем-брюле с карамельной подливкой</a>
+          </a>
+          <div class="catalog-item-mask">
+            <a class="btn mask-button" href="#">Быстрый просмотр</a>
+          </div>
         </article>
       </section>
       <section class="about-us">
@@ -246,11 +232,11 @@
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <div class="contacts">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="contacts-adress">Адрес главного офиса и офлайн-магазина:</p>
-            <span class="contacts-adress bold">ул.Большая Конюшенная 19/8, Санкт-Петербург</span>
-            <span class="contacts-adress-for-order">Для заказов по телефону:</span>
-            <span class="contacts-phone bold">8 812 450-25-25</span>
-            <p class="contacts-schedule">(с 10 до 20 ежедневно)</p>
+          <p class="adress adress-main">Адрес главного офиса и офлайн-магазина:</p>
+            <span class="adress-bold">ул.Большая Конюшенная 19/8, Санкт-Петербург</span>
+            <span class="adress description-for-order">Для заказов по телефону:</span>
+            <span class="phone">8 812 450-25-25</span>
+            <p class="working-time">(с 10 до 20 ежедневно)</p>
             <a class="contacts-button btn" href="#">Форма обратной связи</a>
         </div>
       </section>
@@ -294,13 +280,13 @@
                <a href="#" class="footer-link bold">Для поставщиков</a>
              </li>
              <li class="footer-item">
-               <a href="#" class="footer-link documents">Наши документы</a>
+               <a href="#" class="footer-link">Наши документы</a>
              </li>
              <li class="footer-item">
-               <a href="#" class="footer-link about-creating">О производстве</a>
+               <a href="#" class="footer-link">О производстве</a>
              </li>
              <li class="footer-item">
-               <a href="#" class="footer-link eco-standart">Экологические стандарты</a>
+               <a href="#" class="footer-link">Экологические стандарты</a>
              </li>
            </ul>
          </div>
@@ -325,7 +311,7 @@
          <button class="modal-close" type="button">Закрыть</button>
        </form>
      </section>
-   </div>
- </div>
+    </div>
+  </div>
 </body>
 </html>
