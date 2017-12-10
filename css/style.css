@@ -82,25 +82,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
   list-style: none;
 }
-/*
-.main-navigation-item {
-  padding-left: 0px;
-  margin-left: -5px;
-  margin-top: 0px;
-  backg
-}
-/*
-.main-navigation-link:nth-child(2) {
-  margin-left: 5px;
-}
-
-.main-navigation-link:nth-child(3) {
-  margin-left: 0px;
-}
-/*
-.user-navigation {
-  position: relative;
-}*/
 
 .user-navigation-list {
   display: flex;
@@ -332,8 +313,6 @@ input[type="password"].form-login {
   left: -420px;
   background: #f8f7f4;
 }
-
-
 
 .basket-button {
   position: absolute;
@@ -1666,14 +1645,9 @@ input[type="password"].form-login {
 
 .checkbox-on,
 .checkbox-off {
-    position: absolute;
-    left: 17;
-    top: 8;
-
-}
-
-.filters-fillers-label {
-
+  position: absolute;
+  left: 17;
+  top: 8;
 }
 
 .filters-fillers-label input[type="checkbox"]:checked + .filters-fillers-label .checkbox-on {
@@ -1821,22 +1795,6 @@ input[type="password"].form-login {
   color: #323232;
   border: 2px solid #ededed
 }
-
-display: inline-block;
-margin-top: 27px;
-padding: 5px 27px 5px 29px;
-font-weight: 500;
-background: rgba(254, 254, 254, 0.19);
-border: 2px solid #fbfcfb;
-border-radius: 25px;
-transition: color 0.3s ease, background 0.3s ease;
-cursor: pointer;
-
-
-
-
-
-
 
 .inner-page .main-footer {
   margin-top: 30px;
