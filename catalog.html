@@ -35,10 +35,12 @@
                    1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019
                    2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
                   </svg>
-                  <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
-                    <label for="input-search" class="visually-hidden">Форма поиска</label>
-                    <input class="user-navigation-input" type="search" id="input-search" placeholder="Что ищем?">
-                  </form>
+                  <div class ="form-search-container">
+                    <form class="user-navigation-form form-search" action="https://echo.htmlacademy.ru" method="get">
+                      <label for="input-search" class="visually-hidden">Форма поиска</label>
+                      <input class="user-navigation-input" type="search" name="search" id="input-search" placeholder="Что ищем?">
+                    </form>
+                  </div>
                 </li>
                 <li class="user-navigation-item login" tabindex="0">Вход
                   <svg class="user-navigation-login-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
@@ -55,6 +57,8 @@
                       <div class="user-navigation-links">
                         <a class="user-navigation-link-top" href="#">Забыли пароль?</a>
                         <a class="user-navigation-link-bottom" href="#">Новая регистрация</a>
+                        <div class="modal-close">
+                        </div>
                       </div>
                     </form>
                   </div>
@@ -93,8 +97,12 @@
                         <td class="basket-price">300 руб.</td>
                         <td class="basket-sum">450 руб.</td>
                       </tr>
-                      <tr class="basket-main-sum"><td>Итого: 750 руб.</td></tr>
-                      <tr class="basket-btn"></td><input type="submit" class="btn basket-button"  id="user-navigation-basket" value="Отправить"></td></tr>
+                      <tr class="basket-main-sum">
+                        <td>Итого: 750 руб.</td>
+                      </tr>
+                      <tr class="basket-btn">
+                        <td><input type="submit" class="btn basket-button"  id="user-navigation-basket" value="Отправить"></td>
+                      </tr>
                     </table>
                   </form>
                 </li>
@@ -425,5 +433,94 @@
           <button class="btn" type="submit">Отправить</button>
         </form>
       </section>
+      <script>
+        var link = document.querySelector(".login");
+        var popup = document.querySelector(".form-login-container");
+        var close = popup.querySelector(".modal-close");
+        var form = popup.querySelector("form-login");
+        var email = popup.querySelector("[e-mail]");
+        var password = popup.querySelector("[name=password]");
+        var storage = localStorage.getItem("email");
+
+        var search = document.querySelector(".search");
+        var modal = document.querySelector(".form-search-container");
+        /*var closesearch = modal.querySelector(".modal-search-close");*/
+        /*var formsearch = modal.querySelector("form-search");*/
+        var fieldfocus = modal.querySelector("[name=search]");
+        var storagesearch = localStorage.getItem("search");
+        link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("form-login-show");
+
+        if (storage) {
+            email.value = storage;
+            password.focus();
+          } else {
+            email.focus();
+          }
+        });
+        close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("form-login-show");
+        popup.classList.remove("modal-error");
+        email.focus();
+        });
+
+        form.addEventListener("submit", function (evt) {
+          if (!email.value || !password.value) {
+            evt.preventDefault();
+            popup.classList.remove("modal-error");
+            popup.offsetWidth = popup.offsetWidth;
+            popup.classList.add("modal-error");
+          } else {
+            localStorage.setItem("email", email.value);
+          }
+        });
+
+        window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (popup.classList.contains("form-login-show")) {
+            popup.classList.remove("form-login-show");
+            popup.classList.remove("modal-error");
+          }
+        }
+      });
+    /*
+      search.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modal.classList.add("form-search-show");
+      });
+
+      if (storagesearch)) {
+            search.value = storagesearch;
+            fieldfocus.focus();
+        });
+
+      closesearch.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modal.classList.remove("form-search-show");
+        modal.classList.remove("form-search-error");
+      });
+
+     formsearch.addEventListener("submit", function (evt) {
+        if (!search.value) {
+              evt.preventDefault();
+              modal.classList.remove("form-search-error");
+              modal.offsetWidth = modal.offsetWidth;
+              modal.classList.add("form-search-error");
+            } else {
+          localStorage.setItem("search", search.value);
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (modal.classList.contains("form-search-show")) {
+            modal.classList.remove("form-search-show");
+            modal.classList.remove("form-search-error");
+          }
+        }
+      });*/
+      </script>
     </body>
   </html>

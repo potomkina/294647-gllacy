@@ -99,14 +99,14 @@ input[type="radio"].visually-hidden {
 }
 
 .basket-cross-icon {
-  margin-left: 15px;
+  margin-left: 0px;
+  margin-top: 5px;
 }
 
 .basket-mini-ice-image {
   padding: 0;
   border-radius: 50%;
 }
-
 
 .user-navigation-item {
   font-size: 14px;
@@ -139,12 +139,20 @@ input[type="radio"].visually-hidden {
 .search:hover .user-navigation-search-icon {
   fill: #000;
 }
-
+/*
 .form-search {
   display: none;
 }
+*/
+.form-search-container {
+  display: none;
+}
 
-.search:hover .form-search {
+.form-search-show {
+  display: block;
+}
+
+.search:hover .form-search-container {
   display: block;
   position: absolute;
   padding: 20px 15px;
@@ -152,16 +160,59 @@ input[type="radio"].visually-hidden {
   top: 35px;
   left: -300px;
   background: #f8f7f4;
+  animation: bounce 0.6s;
 }
 
-.form-search:not(:focus):not(:active),
-input[type="search"].form-search,
-.inner-page .form-search:not(:focus):not(:active),
-input[type="search"].form-search {
-  /*width: 340px;*/
+.form-search-error {
+  animation: shake 0.6s;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0px;
+  right: -24px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #000;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+input[type="search"] {
+  width: 310px;
   height: 41px;
-  padding: 20px 15px;
-  border-color:
+  /*padding: 20px 15px;*/
+  border: 1px solid #d3d3d2;
+  border-radius: 10px;
+}
+
+
+input[type="search"]:hover{
+  border: 2px solid #c7c6c5;
+}
+
+input[type="search"]:active {
+  border: 2px solid #8fbdec;
 }
 
 .form-search .user-navigation-input {
@@ -171,21 +222,34 @@ input[type="search"].form-search {
 }
 
 .form-login-container .user-navigation-input {
-  width: 240px;
+  /*width: 240px;*/
   padding: 15px;
-  margin-left: -5px;
+/*  margin-left: -5px;*/
+  box-sizing: border-box;
 }
 
-.form-search,
+.form-search-container,
 .form-login-container,
 .form-basket {
   border-radius: 10px;
 }
 
 .user-navigation-input {
-  padding: 15px;
+/*  padding: 15px;*/
   border-radius: 10px;
   border: 1px solid #d8d8d6;
+}
+
+.user-navigation-input:hover {
+  padding: 15px;
+  border: 2px solid #c7c6c5;
+  border-radius: 10px;
+}
+
+.user-navigation-input:focus {
+  padding: 15px;
+  border: 2px solid #8fbdec;
+  border-radius: 10px;
 }
 
 .login {
@@ -225,20 +289,25 @@ input[type="email"].form-login,
 input[type="password"].form-login {
   font: inherit;
   width: 240px;
-  padding: 15px 10px;
+  padding: 15px 20px;
   margin-bottom: 15px;
 }
 
-.login:hover .form-login-container {
-  display: block;
+.login:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.form-login-show {
+/*  display: block;*/
   position: absolute;
   z-index: 2;
-  width: 280px;
-  padding: 20px;
+  /*width: 280px;
+  padding: 20px;*/
   padding-bottom: 0px;
-  left: -240px;
+  left: -190px;
   top: 35px;
-  background: #f8f7f4;*/
+  background: #f8f7f4;
 }
 
 .user-navigation-button {
@@ -301,8 +370,6 @@ input[type="password"].form-login {
   display: none;
 }
 
-
-
 .inner-page .basket:hover .form-basket {
   display: block;
   position: absolute;
@@ -312,35 +379,6 @@ input[type="password"].form-login {
   top: 35px;
   left: -420px;
   background: #f8f7f4;
-}
-
-.basket-button {
-  position: absolute;
-  bottom: 10px;
-  right: 15px;
-  padding: 10px 25px;
-  font-weight: 700;
-}
-
-.basket-main-sum {
-  display: block;
-  margin-top: 10px;
-}
-
-.basket-title {
-  font: inherit;
-  font-size: 14px;
-  line-height: 16px;
-  width: 235px;
-  padding-left: -50px;
-}
-
-.basket-weight {
-  width: 40px;
-}
-
-.basket-price {
-  color: #999999;
 }
 
 .user-navigation-btn {
@@ -769,17 +807,13 @@ input[type="password"].form-login {
   line-height: 22px;
   font-weight: 500;
   text-align: center;
+  color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #9db1a5;
 }
 
 .catalog-item-text:hover {
-  color: #fff;
-}
-
-.catalog-item-text:active {
-  color: #ceb098;
-  border-bottom: 1px solid #a7a294;
+  border-bottom: none;
 }
 
 .catalog-item:hover ~ .catalog-item-mask,
@@ -959,7 +993,58 @@ input[type="password"].form-login {
 
 .our-news-blog-link:hover,
 .our-news-blog-link:active {
-  color: #ffbc9e;
+  color: #e84d37;
+  text-decoration: none;
+  border-bottom: 1px solid #f9cdc4
+}
+
+.form-login-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .our-news-mail {
@@ -1024,6 +1109,14 @@ input[type="password"].form-login {
   border: 1px solid #d3d3d2;
 }
 
+.our-news-input:hover {
+  border: 2px solid #c7c6c5;
+}
+
+.our-news-input:focus {
+  border: 2px solid #8fbdec;
+}
+
 .map {
   position: relative;
   width: 1200px;
@@ -1031,9 +1124,6 @@ input[type="password"].form-login {
   margin: 0 auto;
   margin-left: -40px;
   padding: 0;
-  background-image: url("../img/map.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
 
 .contacts {
@@ -1242,6 +1332,18 @@ input[type="password"].form-login {
   border-bottom: 1px solid #9db1a5;
 }
 
+.footer-link:hover {
+  color: #ffbc9e;
+  text-decoration: none;
+  border-bottom: 1px solid #a7a294;
+}
+
+.footer-link:active {
+  color: #e6b69b;
+  text-decoration: none;
+  border-bottom: 1px solid #a7a294;
+}
+
 .footer-copyright-text {
   font-size: 12px;
   line-height: 18px;
@@ -1255,6 +1357,18 @@ input[type="password"].form-login {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+}
+
+.footer-copyright-link:hover {
+  color: #ffbc9e;
+  text-decoration: none;
+  border-bottom: 1px solid #a7a294;
+}
+
+.footer-copyright-link:active {
+  color: #e6b69b;
+  text-decoration: none;
+  border-bottom: 1px solid #a7a294;
 }
 
 .modal-windows {
@@ -1404,36 +1518,6 @@ input[type="password"].form-login {
   padding: 15px;
   padding-right: 175px;
   z-index: 4;
-}
-
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  width: 22px;
-  height: 22px;
-  font-size: 0;
-  border: 0;
-  cursor: pointer;
-}
-
-.modal-close::before,
-.modal-close::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 2px;
-  width: 19px;
-  height: 3px;
-  background-color: #000;
-}
-
-.modal-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-close::after {
-  transform: rotate(-45deg);
 }
 
 .feedback-form-title {
@@ -1794,6 +1878,76 @@ input[type="password"].form-login {
   background-color: #ededed;
   color: #323232;
   border: 2px solid #ededed
+}
+
+
+
+
+
+
+.user-navigation-basket-list {
+  width: 540px;
+  min-height: 243px;
+}
+
+.user-navigation-basket-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-button {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  padding: 10px 25px;
+  font-weight: 700;
+}
+
+.basket-main-sum {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 0px;
+  font: inherit;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-left: 415px;
+}
+
+.basket-sum {
+/*  display: block;*/
+  margin-right: 10px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.basket-title {
+  font: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  width: 235px;
+  padding-left: -50px;
+}
+
+.basket-weight {
+  width: 45px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.basket-price {
+  color: #999999;
+  margin-left: -30px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
 .inner-page .main-footer {
